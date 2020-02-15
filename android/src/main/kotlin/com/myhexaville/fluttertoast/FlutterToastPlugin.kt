@@ -21,7 +21,7 @@ class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
     override fun onMethodCall(call: MethodCall, result: Result): Unit {
         if (call.method.equals("showToast")) {
             val message: String? = call.argument("message")
-            Toast toast = Toast.makeText(registrar.context(), message ?: "", Toast.LENGTH_LONG);
+            val toast:Toast = Toast.makeText(registrar.context(), message ?: "", Toast.LENGTH_LONG);
          //   View view = toast.getView();
          //   view.setBackgroundColor(Color.RED);
             toast.show();
