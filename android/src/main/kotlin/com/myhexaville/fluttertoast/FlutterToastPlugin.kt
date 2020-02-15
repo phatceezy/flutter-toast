@@ -21,9 +21,13 @@ class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
       val message: String? = call.argument("message")
       Toast toast = Toast.makeText(registrar.context(), message ?: "", Toast.LENGTH_LONG);
       View view = toast.getView();
-view.setBackgroundResource(R.drawable.custom_background);
-TextView text = (TextView) view.findViewById(android.R.id.message);
-      text.setTextColor(Color.parseColor("#FF0000"));
+ view.setBackgroundColor(Color.TRANSPARENT);
+ TextView text = (TextView) view.findViewById(android.R.id.message);
+
+ //Shadow of the Of the Text Color
+ text.setShadowLayer(0, 0, 0, Color.TRANSPARENT);
+ text.setTextColor(Color.RED);
+ text.setTextSize(Integer.valueOf(getResources().getString(R.string.text_size)));
       toast.show();
     } else {
       result.notImplemented()
