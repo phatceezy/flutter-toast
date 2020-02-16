@@ -1,14 +1,16 @@
 package com.myhexaville.fluttertoast
 
 import android.widget.Toast
+import android.widget.TextView
+import android.view.View
+import android.graphics.Color
+import android.graphics.PorterDuff
+
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.PluginRegistry.Registrar
-import android.view.View
-import android.graphics.Color
-import android.graphics.PorterDuff
 
 class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
   companion object {
