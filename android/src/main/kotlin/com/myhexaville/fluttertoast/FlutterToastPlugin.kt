@@ -8,6 +8,7 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.PluginRegistry.Registrar
 import android.view.View
 import android.graphics.Color
+import android.graphics.PorterDuff
 
 class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
   companion object {
