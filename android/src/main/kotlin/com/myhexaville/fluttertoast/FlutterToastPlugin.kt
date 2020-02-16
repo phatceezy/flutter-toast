@@ -22,7 +22,7 @@ class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
   override fun onMethodCall(call: MethodCall, result: Result): Unit {
     if (call.method.equals("showToast")) {
       val message: String? = call.argument("message")
-      val bgcolor: Long? = call.argument("bgcolor")
+      val bgcolor: Double? = call.argument("bgcolor")
       print("Kotlin")
       print(bgcolor.toString())
       print("end Kotlin")
