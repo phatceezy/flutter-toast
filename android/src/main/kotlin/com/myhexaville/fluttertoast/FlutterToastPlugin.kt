@@ -25,7 +25,7 @@ class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
       val toast = Toast.makeText(registrar.context(), message ?: "", Toast.LENGTH_LONG)
       val view = toast.view
       view.background.setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN)
-      toast.show()
+    //  toast.show()
     } else {
       result.notImplemented()
     }
