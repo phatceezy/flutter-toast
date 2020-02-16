@@ -24,7 +24,7 @@ class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
       val message: String? = call.argument("message")
       val bgcolor: Int? = call.argument("bgcolor")
       printIn("Kotlin")
-      println(bgcolor.toString())
+      printIn(bgcolor.toString())
       printIn("end Kotlin")
       val toast = Toast.makeText(registrar.context(), message ?: "", Toast.LENGTH_LONG)
       val view = toast.view
