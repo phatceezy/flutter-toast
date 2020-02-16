@@ -23,6 +23,9 @@ class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
     if (call.method.equals("showToast")) {
       val message: String? = call.argument("message")
       val bgcolor: Int? = call.argument("bgcolor")
+      printIn("Kotlin")
+      println(bgcolor.toString())
+      printIn("end Kotlin")
       val toast = Toast.makeText(registrar.context(), message ?: "", Toast.LENGTH_LONG)
       val view = toast.view
       view.background.setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_IN)
