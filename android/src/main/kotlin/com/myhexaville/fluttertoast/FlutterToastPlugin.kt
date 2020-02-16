@@ -22,11 +22,11 @@ class FlutterToastPlugin(val registrar: Registrar) : MethodCallHandler {
   override fun onMethodCall(call: MethodCall, result: Result): Unit {
     if (call.method.equals("showToast")) {
       val message: String? = call.argument("message")
-      val bgcolor: Int? = Color.valueOf(call.argument("bgcolor"))
+      val bgcolor: Int? = call.argument("bgcolor")
       //val toast = 
       val toast = Toast.makeText(registrar.context(), message ?: "", Toast.LENGTH_LONG)
       val view = toast.view
-      view.background.setColorFilter(bgcolor, PorterDuff.Mode.SRC_IN)
+      view.background.setColorFilter(Color.valueOf(bgcolor), PorterDuff.Mode.SRC_IN)
       toast.show()
     } else {
       result.notImplemented()
